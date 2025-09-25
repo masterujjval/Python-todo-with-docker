@@ -2,7 +2,7 @@
 This github project is taken from ```https://github.com/Remy349/todo-app-flask-reactjs```.
 If you want to setup the whole project locally please go and checkout the repo.
 
-<strong> Use this repo to run the project on docker practise for docker containerisation </strong>
+<strong> Use this repo to run the project on docker and practise for docker containerisation </strong>
 
 ### Changes
 - Clone the repo
