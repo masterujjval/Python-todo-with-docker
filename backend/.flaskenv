@@ -1,0 +1,3 @@
+FLASK_RUN_HOST=0.0.0.0
+FLASK_APP=application.py
+FLASK_DEBUG=1

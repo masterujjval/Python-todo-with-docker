@@ -1,0 +1,11 @@
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Multistage build now we are going to use a server
+FROM nginx:alpine
+COPY --from=0 /app/dist/ /usr/share/nginx/html/
+CMD ["nginx","-g","daemon off;"]
