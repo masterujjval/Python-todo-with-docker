@@ -8,7 +8,7 @@ checkout scm
 stage("Testing"){
 try{
 sh'''
-cd backend/
+cd /todo-app-flask-reactjs/backend
 python3 manage.py test
 '''
 }catch(err){
@@ -24,6 +24,8 @@ if (env.CHANGE_ID && (currentBuild.result==null || currentBuild.result=="SUCCESS
             
         }
 }
-
+stage("End"){
+cleanWs()
+}
 
 }
