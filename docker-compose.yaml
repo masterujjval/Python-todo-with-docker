@@ -9,17 +9,8 @@ services:
 
   backend:
     build:
-      context: .
-      dockerfile: backend/Dockerfile.backend
+      context: backend/
+      dockerfile: Dockerfile.backend
 
     ports:
       - "5000:5000"
-
-    volumes:
-      - ./backend:/app
-    
-    environment:
-      - FLASK_APP=application.py
-      - FLASK_ENV=development
-    command: flask --app application.py run --host=0.0.0.0
-
