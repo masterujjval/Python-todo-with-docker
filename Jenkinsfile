@@ -24,6 +24,8 @@ if (env.CHANGE_ID && (currentBuild.result==null || currentBuild.result=="SUCCESS
             
         }
 }
-
+stage("End"){
+cleanWs()
+}
 
 }
