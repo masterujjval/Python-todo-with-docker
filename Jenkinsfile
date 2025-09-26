@@ -27,14 +27,21 @@ if (env.CHANGE_ID && (currentBuild.result==null || currentBuild.result=="SUCCESS
         }
 }
 
-stage("End"){
-cleanWs()
-}
+ stage("Sleep") {
+        sh 'sleep 15'
+    }
 
-post {
-  success {
-    build job: 'Python todo CD'
-  }
-}
+    stage("Trigger another Job") {
+        if (currentBuild.result == null || currentBuild.result == "SUCCESS") {
+            build job: 'Python todo CD'
+        }
+    }
+
+    stage("Cleanup") {
+        cleanWs()
+    }
+
+
+
 
 }
