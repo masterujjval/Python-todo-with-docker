@@ -1,9 +1,0 @@
-FROM python:3.13-slim
-
-WORKDIR /app
-
-COPY backend . # copy only the backend folder contents
-
-RUN pip3 install -r requirements.txt
-
-CMD ["flask", "--app", "application.py", "run", "--host=0.0.0.0"]
