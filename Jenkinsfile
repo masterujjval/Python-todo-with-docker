@@ -8,7 +8,8 @@ checkout scm
 stage("Testing"){
 try{
 sh'''
-cd /todo-app-flask-reactjs/backend
+pwd && ls -la
+cd backend
 python3 manage.py test
 '''
 }catch(err){
