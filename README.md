@@ -50,4 +50,4 @@ Everything related to the API is inside `flaskr/routes`. The following table sum
 ![PREVIEW](./preview/preview7.png)
 ![PREVIEW](./preview/preview8.png)
 
-### Changes by Ujjwal Gupta
+### Changes by Mr. Ujjwal Gupta
