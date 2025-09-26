@@ -9,7 +9,7 @@ stage("Testing"){
 try{
 sh'''
 pwd && ls -la
-cd /root/jenkins_storage/workspace/Todo_CICD_with_Jira_main/backend
+cd backend
 python3 test_app.py
 
 '''
