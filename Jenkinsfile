@@ -10,7 +10,8 @@ try{
 sh'''
 pwd && ls -la
 cd /root/jenkins_storage/workspace/Todo_CICD_with_Jira_main/backend
-python3 manage.py test
+python3 test_app.py
+
 '''
 }catch(err){
 currentBuild.result="FAILURE"
