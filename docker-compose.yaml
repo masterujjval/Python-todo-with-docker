@@ -19,7 +19,7 @@ services:
       - ./backend:/app
 
     environment:
-      - FLASK_APP=application.py
+      - FLASK_APP=application
       - FLASK_ENV=development
     command: flask run --host=0.0.0.0
 
