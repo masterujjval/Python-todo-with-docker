@@ -12,5 +12,13 @@ services:
       context: backend/
       dockerfile: Dockerfile.backend
 
+    volumes:
+      - data:/app
+
     ports:
       - "5000:5000"
+
+volumes:
+  data:
+  
+  
